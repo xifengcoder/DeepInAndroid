@@ -223,7 +223,7 @@ gradle.taskGraph.whenReady { taskGrahp ->
 }
 ```
 
-###project.container(java.lang.Class<T> type) 
+### project.container(java.lang.Class<T> type) 
 ```groovy
 class Book {
     final String name
@@ -370,11 +370,22 @@ task myTask << {
     }
 }
 ```
- 命令：gradle -q hello
+命令：
+```
+gradle -q hello
+```
 输出：
+```
 task hello, testProperty: Haha
-命令：gradle -q myTask
+```
+
+命令：
+```
+gradle -q myTask
+```
 输出：
+```
 name = domain1, msg = This is domain1
 name = domain2, msg = This is domain2
 name = domain3, msg = This is domain3
+```
