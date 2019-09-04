@@ -1,4 +1,4 @@
-###一、外部依赖（external dependencies）
+### 一、外部依赖（external dependencies）
 ```groovy
 import org.apache.commons.codec.binary.Base64
 
@@ -21,7 +21,7 @@ task encode {
 ```
 执行: gradle -q encode
 输出：aGVsbG8gd29ybGQK
-###二、自定义Plugin
+### 二、自定义Plugin
 ```groovy
 class GreetingPlugin implements Plugin<Project> {                                                                                 
     void apply(Project project) {
@@ -39,7 +39,7 @@ apply plugin: GreetingPlugin
 执行: gradle -q hello
 输出: Hello from the GreetingPlugin
 
-###三、使用扩展对象，使得Plugin可配置(configurable)
+### 三、使用扩展对象，使得Plugin可配置(configurable)
 ```groovy
 class GreetingPluginExtension {                                                                                                   
     String message = 'Hello from GreetingPlugin'
@@ -65,7 +65,7 @@ greeting.message = 'Hi from Gradle'
 ```
 执行: gradle -q hello
 输出: Hi from Gradle
-###三、使用闭包对扩展对象（extension object）进行分组设置
+### 三、使用闭包对扩展对象（extension object）进行分组设置
 GreetingPluginExtension是一个扩展对象(extension object)，通过属性名greeting添加至项目中。可以为每一个extension对象添加一个configuration block，来进行分组设置.
 ```
 class GreetingPluginExtension {
@@ -96,8 +96,8 @@ greeting {
 执行: gradle -q hello
 输出: Hello from Gradle
 
-###四、依赖
-####Lazy dependsOn
+### 四、依赖
+#### Lazy dependsOn
 ```groovy
 task taskX(dependsOn: 'taskY') {
     doLast {
@@ -111,7 +111,7 @@ task taskY {
     }   
 }
 ```
-####计数
+#### 计数
 ```groovy
 task count {
     doLast {
@@ -134,7 +134,7 @@ task count {
 }
 ```
 
-###五、生命周期（build Lifecycle）
+### 五、生命周期（build Lifecycle）
 ```
 gradle.addBuildListener(new BuildListener() {
     @Override
@@ -305,7 +305,7 @@ quickTip -> /Applications/test/src/docs/quickTip
 userGuide -> /Applications/test/src/docs/userGuide
 userTip -> /Applications/test/src/docs/userTip
 
-###另一个例子：
+### 另一个例子：
 ```groovy
 class TestDomain {
     //必须定义一个 name 属性，并且这个属性值初始化以后不要修改
