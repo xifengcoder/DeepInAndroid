@@ -293,18 +293,20 @@ task booksTask {
 }
 ```
 输出：(books和tips会输出两遍，两遍，两遍！)
-developerGuide -> /Applications/test/src/docs/developerGuide
-quickStart -> /Applications/test/src/docs/quick-start
-quickTip -> /Applications/test/src/docs/quickTip
-userGuide -> /Applications/test/src/docs/userGuide
-userTip -> /Applications/test/src/docs/userTip
----------------------------------
+```
 developerGuide -> /Applications/test/src/docs/developerGuide
 quickStart -> /Applications/test/src/docs/quick-start
 quickTip -> /Applications/test/src/docs/quickTip
 userGuide -> /Applications/test/src/docs/userGuide
 userTip -> /Applications/test/src/docs/userTip
 
+---------------------------------
+developerGuide -> /Applications/test/src/docs/developerGuide
+quickStart -> /Applications/test/src/docs/quick-start
+quickTip -> /Applications/test/src/docs/quickTip
+userGuide -> /Applications/test/src/docs/userGuide
+userTip -> /Applications/test/src/docs/userTip
+```
 ### 另一个例子：
 ```groovy
 class TestDomain {
